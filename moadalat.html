@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>احسب معدلك</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <img src="https://www.almochahid.com/wp-content/uploads/2025/01/image-4.png" 
+                 alt="شعار وزارة التربية الوطنية" 
+                 class="logo">
+            <h1>مؤسسة ابن زهر الإعدادية</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">الرئيسية</a></li>
+                <li><a href="index.html#about">من نحن</a></li>
+                <li><a href="index.html#levels">المستويات</a></li>
+                <li><a href="index.html#Rate-statistics">إحصائيات المعدلات</a></li>
+                <li><a href="moadalat.html">احسب معدلك</a></li>
+                <li><a href="index.html#activities">الأنشطة</a></li>
+                <li><a href="index.html#downloads">التحميلات</a></li>
+                <li><a href="index.html#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="calculator-container">
+        <h2>حساب المعدل</h2>
+        <form id="grade-form">
+            <div class="input-group subject-group">
+                <h3>الرياضيات</h3>
+                <div class="assignments">
+                    <div>
+                        <label for="math1">الفرض الأول:</label>
+                        <input type="number" id="math1" name="math1" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="math2">الفرض الثاني:</label>
+                        <input type="number" id="math2" name="math2" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="math3">الفرض الثالث:</label>
+                        <input type="number" id="math3" name="math3" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="mathCoef">المعامل:</label>
+                        <input type="number" id="mathCoef" name="mathCoef" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group subject-group">
+                <h3>الفيزياء والكيمياء</h3>
+                <div class="assignments">
+                    <div>
+                        <label for="physics1">الفرض الأول:</label>
+                        <input type="number" id="physics1" name="physics1" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="physics2">الفرض الثاني:</label>
+                        <input type="number" id="physics2" name="physics2" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="physics3">الفرض الثالث:</label>
+                        <input type="number" id="physics3" name="physics3" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="physicsCoef">المعامل:</label>
+                        <input type="number" id="physicsCoef" name="physicsCoef" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group subject-group">
+                <h3>اللغة العربية</h3>
+                <div class="assignments">
+                    <div>
+                        <label for="arabic1">الفرض الأول:</label>
+                        <input type="number" id="arabic1" name="arabic1" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="arabic2">الفرض الثاني:</label>
+                        <input type="number" id="arabic2" name="arabic2" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="arabic3">الفرض الثالث:</label>
+                        <input type="number" id="arabic3" name="arabic3" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="arabicCoef">المعامل:</label>
+                        <input type="number" id="arabicCoef" name="arabicCoef" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group subject-group">
+                <h3>اللغة الإنجليزية</h3>
+                <div class="assignments">
+                    <div>
+                        <label for="english1">الفرض الأول:</label>
+                        <input type="number" id="english1" name="english1" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="english2">الفرض الثاني:</label>
+                        <input type="number" id="english2" name="english2" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="english3">الفرض الثالث:</label>
+                        <input type="number" id="english3" name="english3" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="englishCoef">المعامل:</label>
+                        <input type="number" id="englishCoef" name="englishCoef" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group subject-group">
+                <h3>اللغة الفرنسية</h3>
+                <div class="assignments">
+                    <div>
+                        <label for="french1">الفرض الأول:</label>
+                        <input type="number" id="french1" name="french1" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="french2">الفرض الثاني:</label>
+                        <input type="number" id="french2" name="french2" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="french3">الفرض الثالث:</label>
+                        <input type="number" id="french3" name="french3" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="frenchCoef">المعامل:</label>
+                        <input type="number" id="frenchCoef" name="frenchCoef" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group subject-group">
+                <h3>المعلوميات</h3>
+                <div class="assignments">
+                    <div>
+                        <label for="info1">الفرض الأول:</label>
+                        <input type="number" id="info1" name="info1" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="info2">الفرض الثاني:</label>
+                        <input type="number" id="info2" name="info2" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="info3">الفرض الثالث:</label>
+                        <input type="number" id="info3" name="info3" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="infoCoef">المعامل:</label>
+                        <input type="number" id="infoCoef" name="infoCoef" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group subject-group">
+                <h3>التكنولوجيا</h3>
+                <div class="assignments">
+                    <div>
+                        <label for="tech1">الفرض الأول:</label>
+                        <input type="number" id="tech1" name="tech1" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="tech2">الفرض الثاني:</label>
+                        <input type="number" id="tech2" name="tech2" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="tech3">الفرض الثالث:</label>
+                        <input type="number" id="tech3" name="tech3" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="techCoef">المعامل:</label>
+                        <input type="number" id="techCoef" name="techCoef" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group subject-group">
+                <h3>التربية الإسلامية</h3>
+                <div class="assignments">
+                    <div>
+                        <label for="islamic1">الفرض الأول:</label>
+                        <input type="number" id="islamic1" name="islamic1" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="islamic2">الفرض الثاني:</label>
+                        <input type="number" id="islamic2" name="islamic2" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="islamic3">الفرض الثالث:</label>
+                        <input type="number" id="islamic3" name="islamic3" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="islamicCoef">المعامل:</label>
+                        <input type="number" id="islamicCoef" name="islamicCoef" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group subject-group">
+                <h3>التربية البدنية</h3>
+                <div class="assignments">
+                    <div>
+                        <label for="sport1">الفرض الأول:</label>
+                        <input type="number" id="sport1" name="sport1" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="sport2">الفرض الثاني:</label>
+                        <input type="number" id="sport2" name="sport2" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="sport3">الفرض الثالث:</label>
+                        <input type="number" id="sport3" name="sport3" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="sportCoef">المعامل:</label>
+                        <input type="number" id="sportCoef" name="sportCoef" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group subject-group">
+                <h3>علوم الحياة والأرض</h3>
+                <div class="assignments">
+                    <div>
+                        <label for="science1">الفرض الأول:</label>
+                        <input type="number" id="science1" name="science1" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="science2">الفرض الثاني:</label>
+                        <input type="number" id="science2" name="science2" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="science3">الفرض الثالث:</label>
+                        <input type="number" id="science3" name="science3" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="scienceCoef">المعامل:</label>
+                        <input type="number" id="scienceCoef" name="scienceCoef" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group subject-group">
+                <h3>الاجتماعيات</h3>
+                <div class="assignments">
+                    <div>
+                        <label for="social1">الفرض الأول:</label>
+                        <input type="number" id="social1" name="social1" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="social2">الفرض الثاني:</label>
+                        <input type="number" id="social2" name="social2" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="social3">الفرض الثالث:</label>
+                        <input type="number" id="social3" name="social3" min="0" max="20" step="0.25">
+                    </div>
+                    <div>
+                        <label for="socialCoef">المعامل:</label>
+                        <input type="number" id="socialCoef" name="socialCoef" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit">حساب المعدل</button>
+        </form>
+
+        <div id="result">
+            <h3>المعدل النهائي:</h3>
+            <p id="final-result">لم يتم الحساب بعد.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 - جميع الحقوق محفوظة -  مؤسسة ابن زهر الاعدادية</p>
+    </footer>
+
+    <script src="calculator.js"></script>
+</body>
+</html>

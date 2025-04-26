@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة ابن زهر الإعدادية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            direction: rtl;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .header-top img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .header-top h1 {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #1e3a8a;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .home-section {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+            background: linear-gradient(to bottom, #1e3a8a, #2563eb);
+            color: white;
+            padding: 50px 20px;
+            border-radius: 10px;
+        }
+
+        .hero-title {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text {
+            font-size: 20px;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .btn-main {
+            padding: 12px 25px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-main:hover {
+            background-color: #1e40af;
+        }
+
+        .news-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .news-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .news-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .btn-news {
+            padding: 10px 15px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 10px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .btn-news:hover {
+            background-color: #1e40af;
+        }
+
+        .activities-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .calendar-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .calendar-section h2 {
+            font-size: 26px;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+
+        .activities-section {
+            background-color: #f0f4f8;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: #1e3a8a;
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .activity-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .activity-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .activity-card h3 {
+            font-size: 20px;
+            color: #0f172a;
+            margin: 15px 10px 5px;
+        }
+
+        .activity-card p {
+            font-size: 15px;
+            color: #444;
+            margin: 0 10px 15px;
+        }
+
+        .activity-date {
+            display: block;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .levels-section {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .levels-section .section-title {
+            font-size: 30px;
+            color: #1e3a8a;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .levels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .level-card {
+            background-color: #f1f5f9;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: right;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .level-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .level-card h3 {
+            font-size: 22px;
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        .level-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+
+        .level-card ul li {
+            font-size: 15px;
+            padding: 5px 0;
+            color: #374151;
+        }
+
+        .level-desc {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .grades-ranking {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .grades-ranking h2 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .class-section {
+            margin-bottom: 30px;
+        }
+
+        .class-section h3 {
+            color: #5c6bc0;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .class-section table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .class-section th,
+        .class-section td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .class-section th {
+            background-color: #5c6bc0;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .class-section td {
+            color: #555;
+            font-size: 16px;
+        }
+
+        .class-section tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .class-section tbody tr:hover {
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        .class-section td:nth-child(1) {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        @media (max-width: 768px) {
+            .class-section table {
+                width: 100%;
+                display: block;
+                overflow-x: auto;
+            }
+
+            .class-section th,
+            .class-section td {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .grades-ranking h2 {
+                font-size: 20px;
+            }
+        }
+
+        .about-section {
+            background-color: #f9fafb;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .about-text {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: right;
+            transition: transform 0.3s ease;
+        }
+
+        .about-text:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-text h3 {
+            font-size: 22px;
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        .about-text ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .about-text ul li {
+            font-size: 16px;
+            color: #4b5563;
+            margin-bottom: 10px;
+        }
+
+        .contact-section {
+            padding: 60px 20px;
+            background-color: #f4f4f4;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .contact-form h3 {
+            font-size: 24px;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 18px;
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .map-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-section h3 {
+            font-size: 24px;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            border-radius: 10px;
+        }
+
+        .downloads-section {
+            padding: 60px 20px;
+            background-color: #f9fafb;
+        }
+
+        .downloads-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .download-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .download-item h3 {
+            font-size: 24px;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .download-item p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            padding: 12px 25px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .download-link:hover {
+            background-color: #1e40af;
+        }
+
+        .download-item i {
+            margin-right: 10px;
+            color: white;
+        }
+
+        .class-levels {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .level-btn {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .level-btn:hover {
+            background-color: #1e40af;
+        }
+
+        .level-btn.active {
+            background-color: #1e40af;
+        }
+
+        .tests-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .test-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .test-item.show {
+            display: block;
+        }
+
+        .test-item h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <img src="https://www.almochahid.com/wp-content/uploads/2025/01/image-4.png" 
+                 alt="شعار وزارة التربية الوطنية" 
+                 class="logo">
+            <h1>مؤسسة ابن زهرالإعدادية</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#levels">المستويات</a></li>
+                <li><a href="#Rate-statistics">إحصائيات المعدلات</a></li>
+                <li><a href="moadalat.html">احسب معدلك</a></li>
+                <li><a href="#activities">الأنشطة</a></li>
+                <li><a href="#downloads">التحميلات</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home-section">
+        <div class="container">
+            <div class="hero">
+                <h1 class="hero-title">مرحبا بكم في الموقع الرسمي لمؤسسة ابن زهر الإعدادية</h1>
+                <p class="hero-text">نحن نحرص على توفير بيئة تعليمية متميزة، تساعد الطلاب في تحقيق أفضل النتائج.</p>
+                <a href="#about" class="btn-main">تعرف أكثر على المؤسسة</a>
+            </div>
+
+            <div class="news-section">
+                <h2>آخر المستجدات</h2>
+                <div class="news-grid">
+                    <div class="news-item">
+                        <h3>فروض الدورة الأولى</h3>
+                        <p>جدول فروض الدورة الأولى للمراقبة المستمرة متاح الآن، يمكنكم تحميله من قسم التحميلات.</p>
+                        <a href="frouds_dawra_1.html" class="btn-news">تحميل الجدول</a>
+                    </div>
+                    <div class="news-item">
+                        <h3>فروض الدورة الثانية</h3>
+                        <p>اطلع على جدول الفروض للدورة الثانية، تشمل المواعيد والمحتويات التعليمية.</p>
+                        <a href="frouds_dawra_2.html" class="btn-news">تحميل الجدول</a>
+                    </div>
+                    <div class="news-item">
+                        <h3>الامتحانات المحلية</h3>
+                        <p>تم تحديد مواعيد الامتحانات المحلية، تأكد من الإطلاع على المواعيد وتواريخ الامتحانات الخاصة بك.</p>
+                        <a href="examens_locales.html" class="btn-news">تحميل الجدول</a>
+                    </div>
+                    <div class="news-item">
+                        <h3>الامتحانات الجهوية</h3>
+                        <p>تواريخ الامتحانات الجهوية للموسم الدراسي الحالي تم تحديدها، تأكد من الاستعداد بشكل جيد.</p>
+                        <a href="examens_regionales.html" class="btn-news">تحميل الجدول</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activities-section">
+                <h2>الأنشطة القادمة</h2>
+                <div class="activities-list">
+                    <div class="activity-item">
+                        <h3>اليوم الرياضي</h3>
+                        <p>برنامج الأنشطة الرياضية قادم، انضموا إلى فعاليات اليوم الرياضي الذي سيُعقد في نهاية هذا الشهر.</p>
+                        <a href="#activities" class="btn-news">التفاصيل</a>
+                    </div>
+                    <div class="activity-item">
+                        <h3>المسابقة الثقافية</h3>
+                        <p>قريبا سننظم مسابقة ثقافية لجميع التلاميذ، تحضير الأسئلة الثقافية سيبدأ الأسبوع المقبل.</p>
+                        <a href="#activities" class="btn-news">التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-section">
+                <h2>التقويم الدراسي</h2>
+                <p>اطلع على التقويم الدراسي بالكامل ليشمل جميع المواعيد الهامة لهذا العام.</p>
+                <a href="#downloads" class="btn-main">رؤية التقويم كاملاً</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">من نحن</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>نبذة عن المؤسسة</h3>
+                    <p>تأسست مؤسسة ابن زهر الإعدادية بمدينة الرشيدية لتكون منارة تعليمية تُعنى بتكوين جيل مبدع، مسؤول، ومتشبث بقيم المواطنة. نحن نؤمن بأن المدرسة هي الحاضنة الأولى لبناء الإنسان.</p>
+                </div>
+                <div class="about-text">
+                    <h3>رؤيتنا</h3>
+                    <p>نطمح إلى توفير بيئة تعليمية متطورة، شاملة وداعمة، تحفّز التلاميذ على التفكير النقدي، الإبداع، والتعلم مدى الحياة.</p>
+                </div>
+                <div class="about-text">
+                    <h3>رسالتنا</h3>
+                    <p>تمكين التلاميذ من اكتساب المهارات والمعارف الضرورية لمواجهة تحديات الحياة الدراسية والمهنية، من خلال تعليم ذو جودة عالية ومواكبة تربوية فعالة.</p>
+                </div>
+                <div class="about-text">
+                    <h3>قيمنا</h3>
+                    <ul>
+                        <li>✨ الجودة والتميز</li>
+                        <li>🤝 التعاون والاحترام المتبادل</li>
+                        <li>📚 التعلم المستمر</li>
+                        <li>🕊️ الانضباط والمسؤولية</li>
+                        <li>🌱 التنمية المستدامة</li>
+                    </ul>
+                </div>
+                <div class="about-text">
+                    <h3>طاقم المؤسسة</h3>
+                    <p>يتكون طاقم المؤسسة من أطر تربوية وإدارية كفؤة ومجتهدة، تسعى لتقديم الأفضل لتلاميذنا في جو من الالتزام والتفاني.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="levels" class="levels-section">
+        <h2 class="section-title">المستويات الدراسية</h2>
+        <div class="levels-grid">
+            <div class="level-card">
+                <h3>السنة الأولى إعدادي</h3>
+                <ul>
+                    <li>📘 اللغة العربية، الفرنسية الإنجليزية</li>
+                    <li>🧮 الرياضيات</li>
+                    <li>🌍 الاجتماعيات</li>
+                    <li>🧪 علوم الحياة والأرض</li>
+                    <li>💡 الفيزياء والكيمياء</li>
+                    <li>🧑‍💻 الإعلاميات ، التكنولوجية</li>
+                    <li>🎨 التربية التشكيلية</li>
+                    <li>🕌 التربية الإسلامية</li>
+                </ul>
+                <p class="level-desc">سنة تمهيدية لبناء الأساس القوي للمسار الدراسي الإعدادي، وتشجيع التلميذ على الانخراط في الحياة المدرسية.</p>
+            </div>
+
+            <div class="level-card">
+                <h3>السنة الثانية إعدادي</h3>
+                <ul>
+                    <li>📘 تعميق في اللغات الثلاث</li>
+                    <li>🧮 تطوير مهارات التحليل الرياضي</li>
+                    <li>🧬 دروس علمية أكثر عمقًا</li>
+                    <li>💬 تدريبات تعبير شفوي وكتابي</li>
+                    <li>📚 بداية التكوين في المشاريع الصغيرة</li>
+                </ul>
+                <p class="level-desc">تعتبر سنة بناء المهارات الشخصية والعلمية، وإبراز المواهب من خلال الأنشطة المدرسية المختلفة.</p>
+            </div>
+
+            <div class="level-card">
+                <h3>السنة الثالثة إعدادي</h3>
+                <ul>
+                    <li>📝 تحضير للامتحان الموحد المحلي والجهوي</li>
+                    <li>📊 تقويمات دورية وتجريبية</li>
+                    <li>🎯 التوجيه المدرسي نحو الثانوي أو المهني</li>
+                    <li>📚 دعم دراسي مكثف</li>
+                    <li>🎓 تأطير التلاميذ لاختيار المسار الأنسب</li>
+                </ul>
+                <p class="level-desc">سنة حاسمة ومفتاح للمرحلة المقبلة. التركيز فيها يكون على التحصيل والتوجيه السليم.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Rate-statistics" class="levels-section">
+        <h2 class="section-title">ترتيب المعدلات الفصلية</h2>
+        <div class="levels-grid">
+
+            <!-- أولى إعدادي -->
+            <div class="class-section">
+                <h3>المستوى: الأولى إعدادي</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الترتيب</th>
+                            <th>الاسم الكامل</th>
+                            <th>الدورة 1</th>
+                            <th>الدورة 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>مجهول </td>
+                            <td>17.8</td>
+                            <td>18.4</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>مجهول </td>
+                            <td>17.3</td>
+                            <td>17.5</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>مجهول </td>
+                            <td>16.8</td>
+                            <td>17.2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ثانية إعدادي -->
+            <div class="class-section">
+                <h3>المستوى: الثانية إعدادي</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الترتيب</th>
+                            <th>الاسم الكامل</th>
+                            <th>الدورة 1</th>
+                            <th>الدورة 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>مجهول </td>
+                            <td>18.0</td>
+                            <td>18.3</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>مجهول </td>
+                            <td>17.6</td>
+                            <td>17.9</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>مجهول </td>
+                            <td>17.1</td>
+                            <td>17.4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ثالثة إعدادي -->
+            <div class="class-section">
+                <h3>المستوى: الثالثة إعدادي</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الترتيب</th>
+                            <th>الاسم الكامل</th>
+                            <th>الدورة 1</th>
+                            <th>الدورة 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>مجهول </td>
+                            <td>19.0</td>
+                            <td>18.8</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>مجهول </td>
+                            <td>18.2</td>
+                            <td>18.4</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>مجهول </td>
+                            <td>17.8</td>
+                            <td>18.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities" class="activities-section">
+        <h2 class="section-title">الأنشطة المدرسية</h2>
+        <div class="activity-grid">
+            <div class="activity-card">
+                <img src="https://i.imgur.com/3KXG2aZ.jpg" alt="نشاط رياضي">
+                <h3>دوري كرة القدم</h3>
+                <p>نظمت المؤسسة دوريًا بين الأقسام شمل مختلف المستويات، لتعزيز الروح الرياضية.</p>
+                <span class="activity-date">لاحقا </span>
+            </div>
+
+            <div class="activity-card">
+                <img src="https://i.imgur.com/DcFzvof.jpg" alt="نشاط ثقافي">
+                <h3>أمسية شعرية</h3>
+                <p>أمسية شعرية نظمتها المؤسسة بمشاركة تلاميذ متألقين في التعبير والقراءة.</p>
+                <span class="activity-date">لاحقا </span>
+            </div>
+
+            <div class="activity-card">
+                <img src="https://i.imgur.com/o0KkruF.jpg" alt="نشاط بيئي">
+                <h3>حملة نظافة وتشجير</h3>
+                <p>انخراط التلاميذ في حملة نظافة وإعادة تشجير محيط المؤسسة.</p>
+                <span class="activity-date"> لاحقا</span>
+            </div>
+
+            <div class="activity-card">
+                <img src="https://i.imgur.com/JJuZ7WY.jpg" alt="نادي الإعلاميات">
+                <h3>ورشة الإعلاميات و التكنولوجيا</h3>
+                <p>نادي الإعلاميات نظم ورشة تعريفية بعلوم الحاسوب       .</p>
+                <span class="activity-date">لاحقا </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="downloads" class="downloads-section">
+        <div class="container">
+            <h2 class="section-title">التحميلات والاعلانات</h2>
+            <div class="downloads-list">
+                <div class="download-item">
+                    <h3>فروض الدورة الأولى</h3>
+                    <p>يمكنك تحميل جدول فروض الدورة الأولى هنا:</p>
+                    <a href="devoir_s1.html" class="download-link"><i class="fas fa-download"></i> تحميل الفروض</a>
+                </div>
+                <div class="download-item">
+                    <h3>فروض الدورة الثانية</h3>
+                    <p>يمكنك تحميل جدول فروض الدورة الثانية هنا:</p>
+                    <a href="devoir_s2.html" class="download-link"><i class="fas fa-download"></i> تحميل الفروض</a>
+                </div>
+                <div class="download-item">
+                    <h3>الامتحانات المحلية</h3>
+                    <p>يمكنك تحميل جدول الامتحانات المحلية هنا:</p>
+                    <a href="examens_locales.html" class="download-link"><i class="fas fa-download"></i> تحميل الفروض</a>
+                </div>
+                <div class="download-item">
+                    <h3>الامتحانات الجهوية</h3>
+                    <p>يمكنك تحميل جدول نماذج الامتحانات الجهوية هنا:</p>
+                    <a href="examens_regionaux.html" class="download-link"><i class="fas fa-download"></i> تحميل الامتحانات الجهوية</a>
+                </div>
+                <div class="download-item">
+                    <h3>المراجع الدراسية</h3>
+                    <p>تحميل المراجع الدراسية المهمة لجميع التلاميذ:</p>
+                    <a href="references.html" class="download-link"><i class="fas fa-download"></i> تحميل المراجع الدراسية</a>
+                </div>
+                <div class="download-item">
+                    <h3>الإعلانات المدرسية</h3>
+                    <p>تحميل الإعلانات المدرسية الخاصة بالمؤسسة:</p>
+                    <a href="announcements.html" class="download-link"><i class="fas fa-download"></i> تحميل الإعلانات</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا</h2>
+
+            <div class="contact-form">
+                <h3>نموذج الاتصال</h3>
+                <form action="login.html" method="GET">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">رسالتك</label>
+                        <textarea id="message" name="message" placeholder="أدخل رسالتك هنا" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-main">إرسال</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>معلومات التواصل</h3>
+                <p><i class="fas fa-map-marker-alt"></i> العنوان: حي رياض العمران، مدينة الرشيدية</p>
+                <p><i class="fas fa-phone"></i> الهاتف: 05XXXXXXXXX</p>
+                <p><i class="fas fa-envelope"></i> البريد الإلكتروني: xxxxxxx@xxxxx.com</p>
+            </div>
+
+            <div class="map-section">
+                <h3>موقعنا على الخريطة</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.0445869661387!2d-4.475063485310005!3d31.916469531241pintntisf!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd984b000a92d28b%3A0xe1450acf4dc6bb9e!2z2KvYp9mG2YjZitipINin2KjZhiDYstmH2LEg2KfZhNil2LnYr9in2K_Zitip!5e0!3m2!1sar!2sma!4v1625764283456!5m2!1sar!2sma"
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
